@@ -38,7 +38,7 @@ const Contact = () => {
 
     try {
       // ✅ Directly use deployed backend URL
-      const response = await fetch("https://riteshbackend45-4.onrender.com/api/contact", {
+      const response = await fetch("https://rjbackend-zbh2.vercel.app/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

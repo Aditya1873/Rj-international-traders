@@ -1,3 +1,4 @@
+// ✅ Updated Contact.tsx with live backend URL
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -36,6 +37,7 @@ const Contact = () => {
     }
 
     try {
+      // ✅ Directly use deployed backend URL
       const response = await fetch("https://riteshbackend45-4.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -64,7 +66,6 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background py-20">
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-fresh-green">
             Contact Us
@@ -75,7 +76,6 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold mb-6 text-fresh-green">Get In Touch</h2>
@@ -85,7 +85,6 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              {/* Address Card */}
               <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-6 flex items-start space-x-4">
                   <div className="w-12 h-12 bg-fresh-green rounded-lg flex items-center justify-center">
@@ -101,7 +100,6 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Email Card */}
               <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-6 flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gold rounded-lg flex items-center justify-center">
@@ -116,7 +114,6 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Phone Card with Call Buttons */}
               <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-fresh-green bg-gradient-to-r from-fresh-green/5 to-gold/5">
                 <CardContent className="p-6 flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -146,7 +143,6 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Instagram Card */}
               <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-6 flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -163,7 +159,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div>
             <Card className="shadow-xl">
               <CardHeader>
@@ -202,7 +197,6 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Footer */}
       <div className="bg-muted/30 text-center py-2 text-xs text-muted-foreground">
         <p>Website created by Omkar Shitole</p>
       </div>
